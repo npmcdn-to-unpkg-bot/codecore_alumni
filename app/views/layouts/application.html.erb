@@ -20,7 +20,7 @@
 			    	<ul class="nav navbar-nav navbar-right">
 			    		<li>
 				    		<div>
-						  		<%= form_tag '/search', method: 'get', class: 'navbar-form navbar-left', placeholder: 'Search', role: 'search' do %>
+						  		<%= form_tag '/search', method: 'get', class: 'navbar-form navbar-left', role: 'search' do %>
 										<%= text_field_tag :q, nil, placeholder: 'Search', class: 'form-control' %>
 										<%= submit_tag 'Search', class: 'btn' %>
 						  		<% end %>
