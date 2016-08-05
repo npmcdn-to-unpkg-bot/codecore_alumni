@@ -70,6 +70,22 @@
 	}
 }
 
+#video-container .content {
+    padding: 10% 9%;
+}
+#video-container .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    padding: 14% 9%;
+    background: rgba(0,0,0,0.5);
+    -webkit-transition: opacity 2s ease;
+    transition: opacity 2s ease;
+}
 /*****************************************************************
     Index Styling
 ******************************************************************/

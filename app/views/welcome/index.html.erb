@@ -1,6 +1,39 @@
 <div class="hero-video">
 	<div class="video-container">
-  	<iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/Bo7w0dSAJKY?autoplay=1&controls=0&mute=0loop=1&rel=0&showinfo=0&autohide=1&wmode=transparent&hd=1"></iframe>
+		<div id="muteYouTubeVideoPlayer"></div>
+
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script>
+ function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('muteYouTubeVideoPlayer', {
+    videoId: 'Bo7w0dSAJKY', // YouTube Video ID
+    width: 560,               // Player width (in px)
+    height: 316,              // Player height (in px)
+    playerVars: {
+      autoplay: 1,        // Auto-play the video on load
+      controls: 0,				// Show pause/play buttons in player
+			rel: 0,
+      showinfo: 0,        // Hide the video title
+      modestbranding: 1,  // Hide the Youtube Logo
+      loop: 0,            // Run the video in a loop
+      fs: 0,              // Hide the full screen button
+      cc_load_policty: 0, // Hide closed captions
+      iv_load_policy: 3,  // Hide the Video Annotations
+      autohide: 1,
+			hd: 1         // Hide video controls when playing
+    },
+    events: {
+      onReady: function(e) {
+        e.target.mute();
+      }
+    }
+  });
+ }
+
+
+ // Written by @labnol
+</script>
   </div>
 </div>
 <div id="main">
@@ -21,47 +54,47 @@
       <h2>About the Team</h2>
     </div>
     <div class="row">
-			<div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInLeft" data-wow-duration="2s">
-				<%=image_tag("alextjokro.png")%>
-				<p class="name">Alex Tjokro</p>
-				<p class="description">Full-Stack Developer & Designer</p>
-			</div>
       <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInLeft" data-wow-duration="2s">
         <%=image_tag("angelaji.png")%>
         <p class="name">Angela Ji</p>
-        <p class="description">Full-Stack Developer & Visual Effects Artist</p>
+        <p class="description">Full-Stack Developer & Visual A</p>
       </div>
       <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
         <%=image_tag("anuragsaroha.jpg")%>
         <p class="name">Anurag Saroha</p>
-        <p class="description">Mechatronics Engineer with a Passion for Full-Stack Web-Development</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
       </div>
-			<div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
-				<%=image_tag("christruong.jpg")%>
-				<p class="name">Chris Truong</p>
-				<p class="description">Hard-Working & Dedicated Full-Stack Developer</p>
-			</div>
-		</div>
-    <div class="row">
-			<div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
 				<%=image_tag("davidleehr.jpg")%>
-				<p class="name">David Leehr</p>
-				<p class="description">Full-Stack Developer</p>
-			</div>
-			<div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
-				<%=image_tag("gengli.jpg")%>
-				<p class="name">Geng Li</p>
-				<p class="description">Curious Full-Stack Developer</p>
-			</div>
-			<div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInRight" data-wow-duration="2s">
+        <p class="name">David Leehr</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInRight" data-wow-duration="2s">
 				<%=image_tag("lynhyangimlee.jpg")%>
-				<p class="name">Lyn Lee</p>
-				<p class="description">Full-Stack Developer</p>
-			</div>
+        <p class="name">Lyn Lee</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+   	</div>
+    <div class="row">
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInLeft" data-wow-duration="2s">
+				<%=image_tag("alextjokro.png")%>
+        <p class="name">Alex Tjokro</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
+				<%=image_tag("gengli.jpg")%>
+        <p class="name">Geng Li</p>
+        <p class="description">Curious Full-Stack Developer</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
+        <%=image_tag("christruong.jpg")%>
+        <p class="name">Chris Truong</p>
+        <p class="description">Hard-Working & Dedicated Full-Stack Developer</p>
+      </div>
       <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInRight" data-wow-duration="2s">
 				<%=image_tag("torriporter.jpg")%>
         <p class="name">Torri Porter</p>
-        <p class="description">Computer Science Student at the University of British Columbia</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
       </div>
     </div>
   </div><!-- .container -->
