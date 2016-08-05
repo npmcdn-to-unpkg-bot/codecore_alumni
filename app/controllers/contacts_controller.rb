@@ -6,6 +6,7 @@ class ContactsController < ApplicationController
 
   def create
     name = params[:name]
+    email = params[:email]
     message = params[:message]
     @profile = Profile.find params[:profile_id]
     ContactsMailer.notify_student(@profile.user, name, message).deliver_now
