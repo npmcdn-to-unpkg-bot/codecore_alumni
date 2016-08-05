@@ -1,0 +1,19 @@
+$brand-primary: #CB0D0F;
+$primary-color: #CB0D0F;
+$brand-dark: darken(#CB0D0F, 6.5%);
+
+// Bootstrap Styles
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Variables and Mixins Library
+@import 'base/vars';
+@import 'base/colors';
+
+@import 'partials/typography';
+@import 'partials/layout';
+@import 'partials/home';
+@import 'partials/footer';
+@import 'partials/nav';
+@import 'partials/form';
+@import 'partials/buttons';

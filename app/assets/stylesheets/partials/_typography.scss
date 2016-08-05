@@ -1,0 +1,56 @@
+ /*------------------------------------------------------------------------------------*/
+ /* TYPOGRAPHY STYLES */
+ /*------------------------------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Assistant:400,200,300,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+  color: #333;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  font-family: $base-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $title-font;
+}
+
+p, a, li {
+	font-family: $base-font;
+}
+
+h1 {
+  color:$red;
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: bold;
+	color: $black;
+	line-height: 1.2;
+}
+
+p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: 15px;
+	color: $black;
+}
+
+.page-headline {
+  text-align: center;
+  font-size: 5em;
+  margin: 5% 0px 8%;
+}
+.navbar-default .navbar-brand {
+  color: #FFF;
+}
+
+.text-upcase {
+  text-transform: uppercase;
+}

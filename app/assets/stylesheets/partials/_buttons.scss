@@ -1,0 +1,63 @@
+ /*------------------------------------------------------------------------------------*/
+ /* BUTTON STYLES */
+ /*------------------------------------------------------------------------------------*/
+
+.btn-profile-container {
+	margin-top: 30px;
+}
+
+a.btn {
+	font-size: 16px;
+  @include all-transition();
+  -webkit-border-radius:999em;
+	-moz-border-radius:999em;
+	-o-border-radius:999em;
+	-ms-border-radius:999em;
+	border-radius:999em;
+  padding: 7px 16px;
+  margin-bottom: 20px;
+}
+
+a.btn-default,
+.ui-widget-content a.btn-default {
+  border-color: $red;
+  background: transparent;
+  color: $red;
+  &:hover {
+  	color: white;
+  	background-color: $red	;
+  }
+}
+
+a.btn-primary,
+.ui-widget-content .btn-primary {
+	color: white;
+
+	&:hover {
+		background-color: transparent;
+		color: $red;
+		border-color: $red;
+	}
+}
+
+.social-media-links .fa {
+	color: #aaa;
+	font-size: 35px;
+	margin: 0 10px;
+}
+
+.social-media-links .fa:first-child {
+	margin-left: 0;
+	opacity: 1;
+	@include all-transition();
+
+	&:hover {
+		opacity: 0.6;
+		@include all-transition();
+	}
+}
+
+.btn-contact,
+.btn-deactivate {
+	margin: 0 10px;
+}

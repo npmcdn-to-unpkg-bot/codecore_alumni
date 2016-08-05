@@ -1,0 +1,13 @@
+  <ul>
+    <% @project.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+
+<%= simple_form_for [@profile, @project] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :project_url %>
+  <%= f.input :github_url, label: fa_icon("github"), label_html: {class: "form-link-icon"} %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

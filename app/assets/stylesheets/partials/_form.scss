@@ -1,0 +1,92 @@
+/*****************************************************************
+    Form styling
+******************************************************************/
+.form-group {
+	margin-bottom: 35px;
+}
+
+input, textarea, select {
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+.form-control {
+	 padding: 10px 12px;
+}
+
+#profile-tabs label,
+.edit-user label,
+.edit-password label,
+.contact-user label,
+.create-user label,
+.sign-in label,
+.create-profile label {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#profile-tabs input,
+#profile-tabs textarea,
+#profile-tabs select,
+.edit-user input,
+.edit-user textarea,
+.edit-user select,
+.edit-password input,
+.edit-password textarea,
+.edit-password select,
+.contact-user input,
+.contact-user textarea,
+.contact-user select
+.create-user input,
+.create-user textarea,
+.create-user select,
+.sign-in input,
+.sign-in textarea,
+.sign-in select,
+.create-profile input,
+.create-profile textarea,
+.create-profile select {
+	max-width: 800px;
+	font-size: 16px;
+	font-family: $base-font;
+}
+
+.edit-user input[type="submit"] {
+	margin-right: 15px;
+}
+
+.edit-user h1,
+.edit-password h1 {
+	margin-bottom: 25px;
+}
+
+.form-link-icon {
+  font-size: 2em !important;
+}
+
+// Search Bar
+.navbar-form {
+	margin: 0; 
+
+	input[type="text"] {
+		background-color: $red;
+		border: none;
+		border-bottom: solid 1px white;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-o-box-shadow: none;
+		-ms-box-shadow: none;
+		box-shadow: none;
+		color: white;
+
+		font-family: $base-font;
+		font-size: 16px;
+		font-weight: 200;
+		letter-spacing: 1px;
+	}
+
+	input[type="submit"] {
+		display: none;
+	}
+}

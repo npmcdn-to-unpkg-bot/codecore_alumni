@@ -1,0 +1,68 @@
+<div class="hero-video">
+	<div class="video-container">
+  	<iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/Bo7w0dSAJKY?autoplay=1&controls=0&mute=0loop=1&rel=0&showinfo=0&autohide=1&wmode=transparent&hd=1"></iframe>
+  </div>
+</div>
+<div id="main">
+	<div class="hero-overlay"></div>
+	<div class="container">
+	  <div class="col-sm-6 text-center full-height">
+	  	<%= link_to(raw("<button class='index-students filter-students'>All Students</button>"), profiles_path, class: "no-underline") %>
+	  </div>
+	  <div class="col-sm-6 text-center full-height">
+	    <%= link_to(raw("<button class='index-students filter-students'>Available Students</button>"), profiles_path(available: true), class: "no-underline") %>
+	  </div>
+	</div>
+ </div>
+
+<div class="team">
+  <div class="container">
+    <div class="title row">
+      <h2>About the Team</h2>
+    </div>
+    <div class="row">
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInLeft" data-wow-duration="2s">
+        <%=image_tag("angelaji.png")%>
+        <p class="name">Angela Ji</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
+        <%=image_tag("anuragsaroha.jpg")%>
+        <p class="name">Anurag Saroha</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
+				<%=image_tag("davidleehr.jpg")%>
+        <p class="name">David Leehr</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInRight" data-wow-duration="2s">
+				<%=image_tag("lynhyangimlee.jpg")%>
+        <p class="name">Lyn Lee</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+   	</div>
+    <div class="row">
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInLeft" data-wow-duration="2s">
+				<%=image_tag("alextjokro.png")%>
+        <p class="name">Alex Tjokro</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
+				<%=image_tag("gengli.jpg")%>
+        <p class="name">Geng Li</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeIn" data-wow-duration="2s">
+        <%=image_tag("christruong.jpg")%>
+        <p class="name">Chris Truong</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="member col-xs-12 col-sm-4 col-md-3 wow fadeInRight" data-wow-duration="2s">
+				<%=image_tag("torriporter.jpg")%>
+        <p class="name">Torri Porter</p>
+        <p class="description">Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </div><!-- .container -->
+</div><!-- .team -->

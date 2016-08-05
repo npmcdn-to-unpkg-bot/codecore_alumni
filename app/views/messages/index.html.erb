@@ -1,0 +1,62 @@
+<script>
+$(document).ready(function(){
+  $.get("https://npmcdn.com/emoji.json@1.1.1/emoji.json", function(data) {
+    // console.log(data[0]["no"])
+    for(var i = 0; i < 116; i++) {
+      $('#emoji-panel').append("<a data-id=" + data[i]["no"] + ">" + data[i].char + "</a>");
+      $('#emoji-panel').hide();
+    };
+  });
+});
+var scrollDown = function() {
+  $("#messages-div").animate({ scrollTop: $("#messages").height() }, 0);
+  return false;
+}
+var refreshMessages = function(onComplete){
+  $.get("/messages/data", function(data){
+    $("#messages").html("");
+    for(var i = 0; i < data.length; i++) {
+        $('#messages').append("<span class='label label-default label-pill'>" + data[i].user_name + "</span><li data-id=" + data[i].id + " class='list-group-item'>" + data[i].body + "<i class='delete'>X</i></li>")
+    }
+  });
+};
+refreshMessages();
+setInterval(refreshMessages, 5000);
+</script>
+<style>
+#messages-div {
+  width: 90%;
+  height: 350px;
+  overflow: scroll;
+}
+#buttons {
+  text-align: center;
+  margin-top: 10px;
+  float: left;
+}
+
+#emoji-panel {
+  width: 40%;
+  border: 0.5px solid red;
+  border-radius: 10px;
+}
+#text-area {
+  width: 700px;
+  height: 100px;
+  resize: none;
+}
+</style>
+
+<h1 style="text-align: center">CodeChat</h1>
+<div id="messages-div" class="center-block jumbotron">
+  <ul id="messages"></ul>
+</div>
+<form id="chat" >
+  <textarea name="body" placeholder="Type your message..." id="text-area" rows="3" class="col-lg-6 col-lg-offset-2"></textarea>
+  <div id="emoji-panel" class="col-lg-6"></div>
+  <div id="buttons" class="col-lg-12 col-lg-pull-3">
+    <input type="submit" value='Post Message' class='btn btn-warning' id="post-message"/>
+    <button class="btn btn-danger" id="emoji-cheatsheet">Emoji</button>
+  </div>
+</form>
+<div style="text-align: center"></div>

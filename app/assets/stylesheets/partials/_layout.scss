@@ -1,0 +1,314 @@
+ /*------------------------------------------------------------------------------------*/
+ /* LAYOUT STYLES */
+ /*------------------------------------------------------------------------------------*/
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+.no-padding {
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.container-main-content {
+  min-height: 90vh;
+  margin-top: 75px;
+}
+
+.container {
+	max-width: 1140px;
+	width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.content-body {
+  padding:50px;
+}
+.cc-messages {
+  padding-top: 0px;
+}
+.alert {
+  margin-bottom: 0px !important;
+}
+
+hr {
+	border-top: 1px solid #ccc;
+}
+
+/*****************************************************************
+    Social-media-link
+******************************************************************/
+.social-media-links {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 3em;
+}
+
+/*****************************************************************
+    ALL PROFILES PAGE STYLES
+******************************************************************/
+#profiles {
+	display: inline-block;
+	width: 100%;
+}
+
+.profile h3 {
+	display: inline-block;
+	border-bottom: solid 2px $red;
+	padding-bottom: 10px;
+}
+
+/*****************************************************************
+    USER PROFILE STYLES
+******************************************************************/
+.user-image-container img,
+.profile-img img {
+	margin-bottom: 20px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.profile-img img {
+	margin-bottom: 0;
+}
+
+.view-button-container {
+	padding-top: 20px;
+
+	.btn {
+		margin-bottom: 0;
+	}
+}
+
+/*****************************************************************
+    Tabs features
+******************************************************************/
+.logo-thumb {
+  float: left;
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.profile-actions {
+  margin-top: 20px;
+}
+
+.style-tabs {
+	margin-top: 60px;
+}
+
+.ui-widget-content {
+	border: none;
+
+	.ui-widget-header {
+		background: none;
+	}
+
+	.ui-tabs-nav li {
+		margin: 0;
+		padding: 10px 3%;
+		border-radius: 0;
+		border: none;
+		border-top: solid 1px transparent;
+		border-left: solid 1px white;
+		border-right: solid 1px white;
+		background: none;
+		background-color: $red;
+
+		font-size: 16px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		@include all-transition();
+
+		&:focus,
+		&:active {
+			outline: none;
+		}
+
+		&:hover {
+			border-bottom: none;
+			background-color: transparent;
+			border-top: solid 1px $red;
+			@include all-transition();
+			
+			a.ui-tabs-anchor {
+				color: $red;
+			}
+		}
+
+		a.ui-tabs-anchor {
+			color: white;
+
+			&:focus,
+			&:active {
+				outline : none;
+			}
+		}
+
+		&.ui-state-active {
+			border-bottom: none;
+			background-color: transparent;
+			border: none;
+			border-left: solid 1px white;
+			border-right: solid 1px white;
+			border-top: solid 1px $red;
+			padding: 10px 3%;
+
+			a,
+			a:link {
+				color: $red;
+			}
+		}
+	}
+}
+
+#projects,
+#education,
+#experience,
+#skills {
+	display: inline-block;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#education .row,
+#experience .row,
+#skills .row {
+	padding-top: 20px;
+}
+
+p.time {
+	font-weight: 600;
+}
+
+#basic-info {
+	padding-top: 40px;
+}
+
+
+/*****************************************************************
+Skill progress bar
+******************************************************************/
+#profile-skills {
+	padding: 0;
+}
+
+#skills {
+	.profile-actions {
+		margin-top: 0;
+	}
+}
+
+.progress_bar {
+	margin-bottom: 20px;
+	background: none;
+	background-color: #ccc;
+	-webkit-border-radius:999em;
+	-moz-border-radius:999em;
+	-o-border-radius:999em;
+	-ms-border-radius:999em;
+	border-radius:999em;
+	position: relative;
+	overflow: hidden;
+
+	.skills {
+		position: absolute;
+		z-index: 99;
+		left: 0;
+		top: 0;
+		padding: 5px 15px;
+
+		display: inline-block;
+		background-color: $green-dark;
+		-webkit-border-radius:999em;
+		-moz-border-radius:999em;
+		-o-border-radius:999em;
+		-ms-border-radius:999em;
+		border-radius:999em;
+		color: white;
+		letter-spacing: 1px;
+		font-size: 14px;
+	}
+
+	.proficiency {
+		position: absolute;
+		z-index: 99;
+		right: 0;
+		top: 0;
+		padding: 5px 15px;
+
+		display: inline-block;
+		color: white;
+		letter-spacing: 1px;
+		font-size: 14px;
+	}
+
+	.ui-progressbar-value {
+		-webkit-border-radius:999em;
+		-moz-border-radius:999em;
+		-o-border-radius:999em;
+		-ms-border-radius:999em;
+		border-radius:999em;
+		border-color: transparent;
+	}
+}
+
+.skills-progress .ui-progressbar-value.ui-widget-header.ui-corner-left {
+  border-color: $green;
+  background: $green !important;
+}
+
+/*****************************************************************
+    BEFORE APPROVAL PAGE STYLES
+******************************************************************/
+.before-approval {
+	padding: 60px 0;
+	text-align: center;
+
+	.codecore-logo-container {
+		background-color: $red;
+		max-width: 600px;
+		width: 100%;
+		padding: 30px 60px;
+		border-radius: 10px;
+		display: block;
+		margin: 0 auto 40px;
+	}
+
+	p {
+		font-weight: 600;
+		max-width: 600px;
+		margin: 0 auto 30px;
+	}
+}
+
+/*****************************************************************
+    PENDING USER PAGE STYLES
+******************************************************************/
+#pending_users h2 {
+	margin-bottom: 20px;
+}
+
+/*****************************************************************
+    SIGN IN PAGE STYLES
+******************************************************************/
+.sign-in input[type="submit"] {
+	margin-bottom: 15px;
+}

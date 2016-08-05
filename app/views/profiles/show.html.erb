@@ -1,0 +1,85 @@
+<script>
+$(document).ready(function() {
+  var scrollUp = function() {
+    $("html, body").animate({ scrollTop: 0 }, 'fast');
+    return false;
+  };
+  scrollUp();
+});
+</script>
+<div class="container content-body">
+<div class="row">
+  <div class="col-sm-3 text-center user-image-container">
+    <%= image_tag @profile.photo.url(:thumb) %>
+    <% if can? :manage, @profile %>
+      <%= link_to "Edit Profile", edit_profile_path(@profile), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <div class="col-sm-9">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <h1 class="get-connected"><%= @profile.user_full_name %></h1>
+        </div>
+        <div class="col-sm-5 text-right">
+          <p class="profile-actions"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <p><%= @profile.description %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <% unless @profile.linkedin_url.nil? %>
+            <%= link_to fa_icon("linkedin-square"), @profile.linkedin_url, target: "_blank", class: "social-media-links" %>
+          <% end %>
+          <% unless @profile.twitter_url.nil? %>
+            <%= link_to fa_icon("twitter"), @profile.twitter_url, target: "_blank", class: "social-media-links" %>
+          <% end %>
+          <% unless @profile.github_url.nil? %>
+            <%= link_to fa_icon("github"), @profile.github_url, target: "_blank", class: "social-media-links" %>
+          <% end %>
+          <% unless @profile.resume_url.nil? %>
+            <%= link_to fa_icon("download"), @profile.resume_url, target: "_blank", class: "social-media-links" %>
+          <% end %>
+          <%= link_to "Contact #{@profile.user_full_name}", new_profile_contact_path(@profile), class: "btn btn-default btn-contact" %>
+          <% if can? :manage, :all %>
+            <% if @user.approved == true %>
+              <%= link_to "Deactivate", user_path(id: @user, user: {approved: false}), method: :patch, class: "btn btn-primary btn-deactivate" %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="profile-tabs" class="style-tabs">
+    <ul class="ui-tabs">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+    <div id="projects">
+      <%= render "/projects/display_projects" %>
+    </div>
+    <div id="education">
+      <%= render "/educations/display_education" %>
+    </div>
+    <div id="experience">
+      <%= render "/experiences/display_experiences" %>
+    </div>
+    <div id="skills">
+      <%= render "/skills/display_skills" %>
+    </div>
+  </div>
+</div>
+
+<script>
+  $( "#profile-tabs" ).tabs().css({
+     'min-height': '200px',
+     'overflow': 'auto'
+  });
+</script>

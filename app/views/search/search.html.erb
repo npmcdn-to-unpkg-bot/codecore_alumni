@@ -1,0 +1,57 @@
+<div class="container">
+	<h1>Search results</h1>
+
+	<% if @results.any? %>
+		<h5>Your search was executed using precise and fuzzy matching.</h5>
+	<% else %>
+		<h3>Sorry your search didn't return any results.</h3>
+	<% end %>
+
+	<% unless @user_results.empty? %>
+		<h3>User results</h3>
+		<% @user_results.each do |r| %>
+		  <div>
+				<%= link_to "#{r.first_name} #{r.last_name}", profile_path(r) %>
+		  </div>
+		<% end %>
+	<% end %>
+
+	<% unless @profile_results.empty? %>
+		<hr>
+		<h3>Profile results</h3>
+		<% @profile_results.each do |r| %>
+		  <div>
+				<%= link_to "#{r.user.first_name} #{r.user.last_name}'s profile", profile_path(r) %>
+		  </div>
+		<% end %>
+	<% end %>
+
+	<% unless @category_results.empty? %>
+		<hr>
+		<h3>Category results</h3>
+		<% @category_results.each do |r| %>
+		  <% s = r.skills %>
+		  <h5>The following users have skills in a category matching your search term(s)</h5>
+		  <% s.each do |x| %>
+				<div>
+			    <%= link_to "#{x.profile.user.first_name} #{x.profile.user.last_name}", profile_path(x.profile) %>
+				</div>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% unless @profile_adj_results.empty? %>
+		<hr>
+		<h3>The following users have skills, education, experiences, or projects matching your search term(s)</h3>
+		<% @profile_adj_results.each do |r| %>
+		  <!-- There is currently a bug in the seeds which leads to unassociated entries, hence the temporary work around -->
+		  <% unless r.profile == nil %>
+				<div>
+			    <%= link_to "#{r.profile.user.first_name} #{r.profile.user.last_name}", profile_path(r.profile) %>
+				</div>
+		  <% else %>
+				<% next %>
+		  <% end %>
+		<% end %>
+	<% end %>
+</div>

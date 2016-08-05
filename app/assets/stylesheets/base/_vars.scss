@@ -1,0 +1,31 @@
+ /*------------------------------------------------------------------------------------*/
+ /* VARIABLES */
+ /*------------------------------------------------------------------------------------*/
+$base-font: 'Assistant', Helvetica, sans-serif;
+$title-font: 'Montserrat', Helvetica, sans-serif;
+
+  /*------------------------------------------------------------------------------------*/
+ /* MIXINS */
+ /*------------------------------------------------------------------------------------*/
+@mixin font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+@mixin all-transition() {
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+}
+
+@mixin centered() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}

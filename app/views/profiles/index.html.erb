@@ -1,0 +1,27 @@
+<div class="content-body">
+  <div class="container">
+    <div id="profiles">
+      <% @profiles.each do |profile| %>
+        <% if profile.user.approved || profile.user.admin %>
+          <div class="col-xs-12 col-sm-6 col-md-3 text-center profile">
+            <% if profile.photo %>
+              <p class="profile-img"><%= image_tag profile.photo.url(:thumb) %> </p>
+            <% end %>
+            <h3><%= profile.user_full_name %></h3>
+            <p><%= profile.tagline %></p>
+            <p><%= link_to "View Profile", profile_path(profile), class: "btn btn-primary" %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="pagination-container">
+      <%= paginate @profiles, :theme => 'twitter-bootstrap-3', :pagination_class => "pagination-sm pagination-centered" %>
+    </div>
+  </div><!-- .container -->
+</div>
+
+
+<script>
+  // $('.profile-img').matchHeight();
+</script>

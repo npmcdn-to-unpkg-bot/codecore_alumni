@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="contact-user">
+    <div class="col-xs-12">
+      <h1> Contact <%=Profile.find(@profile).user.full_name%></h1>
+
+      <%= form_tag('/contacts', class: 'form') do %>
+        <%= hidden_field_tag :profile_id, @profile%>
+        <div class="form-group">
+          <%= label_tag :name, "Name", class: "control-label" %>
+          <%= text_field_tag :name, "", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :email, "Email", class: "control-label" %>
+          <%= email_field_tag :email," ", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :message, "Message", class: "control-label" %>
+          <%= text_area_tag :message, "", rows: 6, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= submit_tag "Submit", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
