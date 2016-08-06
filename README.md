@@ -50,7 +50,7 @@ Contact Us!
 
 **Back-End:** Ruby on Rails
 
-**Databases:** PostgreSQL and ActiveRecord
+**Databases:** PostgreSQL
 
 **Storage:** AWS S3 Cloud
 
