@@ -1,6 +1,6 @@
 <script>
 $(document).ready(function(){
-  $.get("https://npmcdn.com/emoji.json@1.1.1/emoji.json", function(data) {
+  $.get("https://unpkg.com/emoji.json@1.1.1/emoji.json", function(data) {
     // console.log(data[0]["no"])
     for(var i = 0; i < 116; i++) {
       $('#emoji-panel').append("<a data-id=" + data[i]["no"] + ">" + data[i].char + "</a>");
